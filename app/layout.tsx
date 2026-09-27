@@ -13,8 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.mscamargo.com"),
   title: "Think Twice, Code Once.",
   description: "Coming soon.",
+  openGraph: {
+    title: "Think Twice, Code Once.",
+    description: "Coming soon.",
+    url: "/",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
