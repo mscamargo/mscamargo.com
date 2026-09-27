@@ -39,6 +39,16 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      <footer className="absolute right-6 bottom-6 text-[13px] text-gray-900">
+        by{" "}
+        <a
+          href="https://www.mscamargo.dev"
+          className="transition-colors hover:text-gray-1000"
+        >
+          mscamargo.dev
+        </a>
+      </footer>
     </main>
   );
 }
