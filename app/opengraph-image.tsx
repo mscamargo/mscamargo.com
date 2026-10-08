@@ -10,6 +10,12 @@ const geistSemiBold = await readFile(
   join(process.cwd(), "assets/Geist-SemiBold.ttf"),
 );
 
+// Same file as the favicon, so logo updates show up here too
+const logo = `data:image/svg+xml;base64,${(
+  await readFile(join(process.cwd(), "app/icon.svg"))
+).toString("base64")}`;
+const logoSize = 88;
+
 // Geist dark tokens from globals.css — ImageResponse can't read CSS variables
 const background100 = "#0a0a0a";
 const background200 = "#000000";
@@ -89,6 +95,13 @@ export default function Image() {
             letterSpacing: "-0.06em",
           }}
         >
+          {/* eslint-disable-next-line jsx-a11y/alt-text */}
+          <img
+            src={logo}
+            width={logoSize}
+            height={logoSize}
+            style={{ marginBottom: 40 }}
+          />
           <div>Think Twice,</div>
           <div>Code Once.</div>
         </div>
